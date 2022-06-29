@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileEditSellerActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRlseller"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_rect01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/gpsEditSeller"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_gps_white"
+            android:layout_alignParentRight="true"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+
+        android:id="@+id/ProfileIvSellerEt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/toolbarRlseller"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_person_gray"
+        app:c_border="true"
+        app:c_border_color="@color/Green"
+        app:c_border_width="2dp" />
+
+    <EditText
+        android:id="@+id/nameEditSeller"
+        android:layout_below="@+id/ProfileIvSellerEt"
+        android:hint=" Full Name"
+        android:drawableStart="@drawable/ic_person_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:inputType="textPersonName|textCapWords"
+        android:drawableLeft="@drawable/ic_baseline_login_gray" />
+
+    <EditText
+        android:id="@+id/shopnameEtSeller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEditSeller"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:drawableStart="@drawable/ic_store_grey"
+        android:drawableLeft="@drawable/ic_store_grey"
+        android:hint=" NGO Name"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp" />
+
+
+    <EditText
+        android:id="@+id/phoneEtseller"
+        android:layout_below="@+id/shopnameEtSeller"
+        android:hint=" Phone"
+        android:drawableStart="@drawable/ic_phone_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/ic_baseline_login_gray" />
+    <EditText
+        android:id="@+id/DeliveryfeeEt"
+        android:layout_below="@+id/phoneEtseller"
+        android:hint=" Delivery Fee"
+        android:drawableStart="@drawable/ic_local_shipping_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:inputType="numberDecimal"
+        android:drawableLeft="@drawable/ic_local_shipping_gray" />
+
+
+
+    <LinearLayout
+        android:id="@+id/addressEdit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/DeliveryfeeEt"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/CountryEtSeller"
+            android:hint=" country"
+            android:drawableStart="@drawable/ic_location_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:inputType="textPostalAddress"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_location_gray" />
+
+        <EditText
+            android:id="@+id/StateEditSeller"
+            android:hint=" state"
+            android:drawableStart="@drawable/ic_location_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:inputType="textPostalAddress"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_location_gray" />
+
+        <EditText
+            android:id="@+id/CityEtSeller"
+            android:hint=" city"
+            android:drawableStart="@drawable/ic_location_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:inputType="textPostalAddress"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_baseline_login_gray" />
+
+
+
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/FulladdressEtSeller"
+        android:layout_below="@+id/addressEdit2"
+        android:hint=" full address"
+        android:drawableStart="@drawable/ic_location_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:inputType="textPostalAddress|textMultiLine"
+        android:drawableLeft="@drawable/ic_baseline_login_gray" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/shopOpenswitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FulladdressEtSeller"
+
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Shop Open"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/UpdateSeller"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopOpenswitch"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#7CB342"
+        android:minWidth="120dp"
+        android:text="UPDATE" />
+
+
+</RelativeLayout>
